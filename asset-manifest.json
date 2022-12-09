@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "./static/js/main.7fbc32ab.chunk.js",
-    "main.js.map": "./static/js/main.7fbc32ab.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.8f687647.js",
-    "runtime-main.js.map": "./static/js/runtime-main.8f687647.js.map",
-    "static/js/2.a707fcd0.chunk.js": "./static/js/2.a707fcd0.chunk.js",
-    "static/js/2.a707fcd0.chunk.js.map": "./static/js/2.a707fcd0.chunk.js.map",
-    "index.html": "./index.html",
-    "static/js/2.a707fcd0.chunk.js.LICENSE.txt": "./static/js/2.a707fcd0.chunk.js.LICENSE.txt",
-    "static/media/clipboard-check.a96a9aa4.svg": "./static/media/clipboard-check.a96a9aa4.svg",
-    "static/media/document-text.cbb0a650.svg": "./static/media/document-text.cbb0a650.svg",
-    "static/media/home.83a1522b.svg": "./static/media/home.83a1522b.svg",
-    "static/media/rackhub.5227d9cc.svg": "./static/media/rackhub.5227d9cc.svg",
-    "static/media/template.7130c40b.svg": "./static/media/template.7130c40b.svg",
-    "static/media/user.f273e40a.svg": "./static/media/user.f273e40a.svg"
+    "main.js": "/rackhub/static/js/main.7fbc32ab.chunk.js",
+    "main.js.map": "/rackhub/static/js/main.7fbc32ab.chunk.js.map",
+    "runtime-main.js": "/rackhub/static/js/runtime-main.4a5774eb.js",
+    "runtime-main.js.map": "/rackhub/static/js/runtime-main.4a5774eb.js.map",
+    "static/js/2.375d0b74.chunk.js": "/rackhub/static/js/2.375d0b74.chunk.js",
+    "static/js/2.375d0b74.chunk.js.map": "/rackhub/static/js/2.375d0b74.chunk.js.map",
+    "index.html": "/rackhub/index.html",
+    "static/js/2.375d0b74.chunk.js.LICENSE.txt": "/rackhub/static/js/2.375d0b74.chunk.js.LICENSE.txt",
+    "static/media/clipboard-check.a96a9aa4.svg": "/rackhub/static/media/clipboard-check.a96a9aa4.svg",
+    "static/media/document-text.cbb0a650.svg": "/rackhub/static/media/document-text.cbb0a650.svg",
+    "static/media/home.83a1522b.svg": "/rackhub/static/media/home.83a1522b.svg",
+    "static/media/rackhub.5227d9cc.svg": "/rackhub/static/media/rackhub.5227d9cc.svg",
+    "static/media/template.7130c40b.svg": "/rackhub/static/media/template.7130c40b.svg",
+    "static/media/user.f273e40a.svg": "/rackhub/static/media/user.f273e40a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8f687647.js",
-    "static/js/2.a707fcd0.chunk.js",
+    "static/js/runtime-main.4a5774eb.js",
+    "static/js/2.375d0b74.chunk.js",
     "static/js/main.7fbc32ab.chunk.js"
   ]
 }
