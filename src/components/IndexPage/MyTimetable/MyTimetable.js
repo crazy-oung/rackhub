@@ -1,28 +1,23 @@
 import React from "react";
-
+import { useHistory } from "react-router-dom";
 import {
   DashBoardContentBoxWide,
   BoxContentTitle,
   BoxContentTitleLink,
   BoxContentList,
   ContentListTitle,
-  ContentListContent,
-  BoxContentListSeparator,
   BoxContentListSection,
-  EndDate,
   BoxContentTitleDescription,
   BoxContentListSecond,
-  TitleProfessor,
   ProfessorGrey,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
+
+import { LectureReviewButton, LectureScore } from "./MyTimetable.style";
 
 import { timetableLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyTimetable = () => {
-  const totalGP = timetableLectureList.reduce(
-    (a, b) => a + (b["grade"] || 0),
-    0
-  );
+  const history = useHistory();
 
   const trimLetters = (name) => {
     return name.length > 6 ? name.substr(0, 6) + " ..." : name;
@@ -32,16 +27,23 @@ const MyTimetable = () => {
     const rows = [];
     for (let i = index; i < index + 3; i++) {
       rows.push(
-        <li key={index}>
+        <li key={timetableLectureList[i].name}>
           <ContentListTitle>
             {trimLetters(timetableLectureList[i].name)}
           </ContentListTitle>
           <ProfessorGrey>
             {timetableLectureList[i].professor} 교수님{" "}
           </ProfessorGrey>
-          <TitleProfessor>
-            {timetableLectureList[i].rating.toFixed(1)}
-          </TitleProfessor>
+
+          {timetableLectureList[i].rating === "" ? (
+            <LectureReviewButton
+              onClick={() => {
+                history.push("/lectures");
+              }}
+            />
+          ) : (
+            <LectureScore>{timetableLectureList[i].rating}</LectureScore>
+          )}
         </li>
       );
     }
@@ -62,7 +64,7 @@ const MyTimetable = () => {
 
       <BoxContentListSection>
         <BoxContentList>{getThreeLectureFrom(0)}</BoxContentList>
-        <BoxContentListSeparator />
+
         <BoxContentListSecond style={{ left: "20px" }}>
           {getThreeLectureFrom(3)}
         </BoxContentListSecond>

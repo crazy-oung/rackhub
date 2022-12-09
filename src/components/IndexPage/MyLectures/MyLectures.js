@@ -6,8 +6,6 @@ import {
   BoxContentTitleLink,
   BoxContentList,
   ContentListTitle,
-  ContentListContent,
-  BoxContentListSeparator,
   BoxContentListSection,
   EndDate,
   BoxContentTitleDescription,
@@ -18,7 +16,6 @@ import {
 import { currentLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyLectures = () => {
-  const currLectureList = JSON.stringify(currentLectureList);
   const totalGP = currentLectureList.reduce((a, b) => a + (b["grade"] || 0), 0);
 
   const trimLetters = (name) => {
@@ -28,7 +25,7 @@ const MyLectures = () => {
     const rows = [];
     for (let i = index; i < index + 3; i++) {
       rows.push(
-        <li key={index}>
+        <li key={trimLetters(currentLectureList[i].lecture)}>
           <ContentListTitle>
             {trimLetters(currentLectureList[i].lecture)}
           </ContentListTitle>
@@ -56,7 +53,7 @@ const MyLectures = () => {
 
       <BoxContentListSection>
         <BoxContentList>{getThreeLectureFrom(0)}</BoxContentList>
-        <BoxContentListSeparator />
+
         <BoxContentListSecond style={{ left: "20px" }}>
           {getThreeLectureFrom(3)}
         </BoxContentListSecond>

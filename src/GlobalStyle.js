@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'AppleSDGothicNeo';
       font-weight: normal; 
       font-style: normal;
-      src: url(assets/font/AppleSDGothicNeo/AppleSDGothicNeoM00-03.otf) format('opentype');
+      src: url(assets/font/AppleSDGothicNeo/AppleSDGothicNeoR00-02.otf) format('opentype');
   }
   @font-face {
     font-family: 'AppleSDGothicNeo';

@@ -8,7 +8,6 @@ import {
   BoxContentList,
   ContentListTitle,
   ContentListContent,
-  BoxContentListSeparator,
   BoxContentListSection,
   EndDate,
   BoxContentTitleDescription,
@@ -43,7 +42,6 @@ const MyPage = () => {
             <MyName>테스트 유저</MyName>
             <MyMainFocus>기말고사 기간 진행중</MyMainFocus>
           </MyProfileSection>
-          <BoxContentListSeparator />
         </DashBoardContentBoxWide>
       </DashboardSection>
     </motion.div>

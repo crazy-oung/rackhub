@@ -122,7 +122,7 @@ export const BoxContentTitleLink = styled(Link)`
   color: ${FontColor};
   text-align: left;
 
-  border-radius: 8px;
+  border-radius: 10px;
   :hover {
     background-color: rgba(0, 0, 0, 0.08);
     transition: background 0.2s cubic-bezier(0.32, 0.08, 0.24, 1),
@@ -138,9 +138,6 @@ export const BoxContentTitleDescription = styled.h3`
 
   line-height: normal;
   letter-spacing: normal;
-
-  @media screen and (max-width: ${MobileViewWidth}) {
-  }
 `;
 
 export const BoxContentList = styled.ul`
@@ -161,14 +158,32 @@ export const BoxContentList = styled.ul`
   flex-wrap: wrap;
   align-content: flex-start;
 
+  border-right: 1px solid #eee;
+
+  :last-child {
+    border-right: none;
+  }
+
+  @media screen and (max-width: ${MobileViewWidth}) {
+    width: 100%;
+    border-right: none;
+  }
+
   li {
     width: calc(100% - 20px);
-    max-height: 71px;
     padding: 20px;
-    border-radius: 8px;
+    border-bottom: solid 1px #eee;
 
+    max-height: 71px;
     position: inherit;
+
+    :last-child {
+      border-bottom: none;
+    }
+
     :hover {
+      border-bottom: none;
+      border-radius: 10px;
       background-color: rgba(0, 0, 0, 0.08);
       transition: background 0.2s cubic-bezier(0.32, 0.08, 0.24, 1),
         opacity 0.2s cubic-bezier(0.32, 0.08, 0.24, 1);
@@ -186,17 +201,6 @@ export const BoxContentListSecond = styled(BoxContentList)`
   }
 `;
 
-export const BoxContentListSeparator = styled.div`
-  display: inline;
-  width: 1px;
-  height: 100%;
-  position: relative;
-  background-color: #eee;
-  @media screen and (max-width: ${MobileViewWidth}) {
-    display: none;
-  }
-`;
-
 export const EndDate = styled.span`
   display: flex;
   position: absolute;
@@ -208,8 +212,10 @@ export const EndDate = styled.span`
 `;
 
 export const ContentListTitle = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
+
+  line-height: 18px;
   text-align: left;
   color: ${FontColor};
 `;
@@ -234,23 +240,6 @@ export const DashboardRightContentBox = styled(DashBoardContentBox)`
     margin-top: 8px;
     min-height: 160px;
     flex-wrap: wrap;
-  }
-`;
-
-export const TitleProfessor = styled.div`
-  display: flex;
-  height: 39px;
-  width: auto;
-  margin-right: 24px;
-
-  flex-direction: column;
-  justify-content: space-around;
-
-  top: 10px;
-  right: 10px;
-  position: absolute;
-
-  @media screen and (max-width: ${MobileViewWidth}) {
   }
 `;
 
@@ -288,12 +277,13 @@ export const Rating = styled.span`
   display: flex;
   position: absolute;
   height: 24px;
-  right: 24px;
-  top: 16px;
-  align-items: flex-end;
-
   font-size: 16px;
   font-weight: 500;
+
+  right: 24px;
+  top: 16px;
+
+  align-items: flex-end;
   line-height: normal;
   letter-spacing: normal;
 

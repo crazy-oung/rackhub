@@ -3,11 +3,7 @@ import styled from "styled-components";
 import {
   MobileViewWidth,
   FontColor,
-  BorderColor,
   PrimaryColor,
-  NoticeColor,
-  PlaceholderColor,
-  MenuColor,
 } from "../../../static/Shared/commonStyles";
 
 export const MyProfileIcon = styled.p`
