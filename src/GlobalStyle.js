@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { MobileViewWidth } from "./static/Shared/commonStyles";
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -71,7 +72,10 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
 
     background: #fff;
-
+    @media screen and (max-width: ${MobileViewWidth}) {
+      background: radial-gradient( circle at 25%, hsla(0,0%,90%,0.2), rgba(150,150,150,0.04) 100% );
+    }
+    
 
   }
 

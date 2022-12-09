@@ -12,14 +12,36 @@ import {
   EndDate,
   BoxContentTitleDescription,
   BoxContentListSecond,
+  ProfessorGrey,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
 import { currentLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyLectures = () => {
   const currLectureList = JSON.stringify(currentLectureList);
-
   const totalGP = currentLectureList.reduce((a, b) => a + (b["grade"] || 0), 0);
+
+  const trimLetters = (name) => {
+    return name.length > 6 ? name.substr(0, 6) + " ..." : name;
+  };
+  const getThreeLectureFrom = (index) => {
+    const rows = [];
+    for (let i = index; i < index + 3; i++) {
+      rows.push(
+        <li key={index}>
+          <ContentListTitle>
+            {trimLetters(currentLectureList[i].lecture)}
+          </ContentListTitle>
+          <ProfessorGrey>
+            {currentLectureList[i].professer} 교수님
+          </ProfessorGrey>
+          <EndDate>{currentLectureList[i].date}</EndDate>
+        </li>
+      );
+    }
+
+    return rows;
+  };
 
   return (
     <DashBoardContentBoxWide>
@@ -33,34 +55,10 @@ const MyLectures = () => {
       </BoxContentTitle>
 
       <BoxContentListSection>
-        <BoxContentList>
-          {currentLectureList.map(
-            ({ lecture, professer, grade, date }, index) => (
-              <li key={index} style={{ width: "100%" }}>
-                <ContentListTitle>{lecture}</ContentListTitle>
-                <ContentListContent>{professer}</ContentListContent>
-                <EndDate>{date}</EndDate>
-              </li>
-            )
-          )}
-        </BoxContentList>
+        <BoxContentList>{getThreeLectureFrom(0)}</BoxContentList>
         <BoxContentListSeparator />
         <BoxContentListSecond style={{ left: "20px" }}>
-          <li>
-            <ContentListTitle>객체지향</ContentListTitle>
-            <ContentListContent>김상진 교수님 </ContentListContent>
-            <EndDate>End: 2022.12.10</EndDate>
-          </li>
-          <li>
-            <ContentListTitle>객체지향</ContentListTitle>
-            <ContentListContent>김상진 교수님 </ContentListContent>
-            <EndDate>End: 2022.12.10</EndDate>
-          </li>
-          <li>
-            <ContentListTitle>객체지향</ContentListTitle>
-            <ContentListContent>김상진 교수님 </ContentListContent>
-            <EndDate>End: 2022.12.10</EndDate>
-          </li>
+          {getThreeLectureFrom(3)}
         </BoxContentListSecond>
       </BoxContentListSection>
     </DashBoardContentBoxWide>

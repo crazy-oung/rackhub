@@ -1,6 +1,7 @@
 export const DefaultContentWidth = "1035px";
 export const DefaultFontSize = "14px";
 export const MobileViewWidth = "768px";
+
 export const MINIMUM_PC_WEBVIEW_WIDTH = `calc(${DefaultContentWidth} + 20px)`;
 
 export const PrimaryColor = "#83db4c";

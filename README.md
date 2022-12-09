@@ -1,12 +1,12 @@
-# **My-hub**
+# **🥬 나만의 서랍, RackHub(랙허브)**
 
-- **BCSD temporary project**
-  - Summer vaction temporary project before doing new project
-- Building [hangang](https://hangang.in/) using react, redux-toolkit, redux-toolkit-query
+- **2022-2학기 모바일프로그래밍 수업 텀프로젝트 제출**
+- rack(서랍) + hub(허브)를 합친 이름
 
-## Targets
+## 기능
 
-1. Build main page
-   - Due to Aug14, 2021
-   - Unfnished Second Due
-     - Second Due: Aug19, 2021
+- 메인 페이지에서 각 현황 한눈에 확인
+- 메모 페이지
+- 가의 수강 현황 (학점 합, 수강 기록 등)
+- 나의 할 일(To-Do) 등록
+- 메모장

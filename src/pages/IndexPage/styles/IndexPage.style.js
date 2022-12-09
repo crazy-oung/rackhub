@@ -14,12 +14,11 @@ const MINIMUM_PC_WEBVIEW_WIDTH = `calc(${DefaultContentWidth} + 20px)`;
 export const DashBoard = styled.div`
   display: flex;
   padding: 20px 0;
-
+  margin: 0 0 100px 0;
   width: ${DefaultContentWidth};
 
   @media screen and (max-width: ${MINIMUM_PC_WEBVIEW_WIDTH}) {
     width: auto;
-    margin: 40px 0 100px 0;
   }
 
   @media screen and (max-width: ${MobileViewWidth}) {
@@ -35,11 +34,12 @@ export const DashBoardContentBox = styled.article`
   margin: 15px;
   width: 315px;
   height: 315px;
+  min-width: 315px;
   background: #fff;
   border: 1px solid ${BorderColor};
   block-size: 315px;
   border-radius: 16px;
-  box-shadow: 17px 20px 40px rgb(0 0 0 / 21%);
+  box-shadow: 0 10px 30px 0 rgba(65, 65, 65, 0.1);
 
   flex-direction: column;
   position: relative;
@@ -53,12 +53,15 @@ export const DashBoardContentBox = styled.article`
   cursor: pointer;
   :hover {
     transform: scale(1.02);
-    box-shadow: 27px 25px 45px rgb(0 0 0 / 21%);
+    box-shadow: 27px 25px 45px rgb(0 0 0 / 11%);
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
   }
 
   @media screen and (max-width: ${MobileViewWidth}) {
+    width: 100%;
+    box-shadow: 0 10px 30px 0 rgba(65, 65, 65, 0.1);
+
     :last-child {
       margin-bottom: 80px;
     }
@@ -66,11 +69,14 @@ export const DashBoardContentBox = styled.article`
 `;
 export const DashBoardContentBoxWide = styled(DashBoardContentBox)`
   width: calc(100% - 375px);
-  min-width: 315px;
-
   @media screen and (max-width: ${MobileViewWidth}) {
-    width: 315px;
+    width: 100%;
   }
+`;
+
+export const DashBoardContentBoxWide100 = styled(DashBoardContentBox)`
+  width: 100%;
+  min-width: 315px;
 `;
 
 export const BoxContentTitle = styled.div`
@@ -157,6 +163,7 @@ export const BoxContentList = styled.ul`
 
   li {
     width: calc(100% - 20px);
+    max-height: 71px;
     padding: 20px;
     border-radius: 8px;
 
@@ -166,8 +173,13 @@ export const BoxContentList = styled.ul`
       transition: background 0.2s cubic-bezier(0.32, 0.08, 0.24, 1),
         opacity 0.2s cubic-bezier(0.32, 0.08, 0.24, 1);
     }
+
+    @media screen and (max-width: ${MobileViewWidth}) {
+      width: 100%;
+    }
   }
 `;
+
 export const BoxContentListSecond = styled(BoxContentList)`
   @media screen and (max-width: ${MobileViewWidth}) {
     display: none;
@@ -234,9 +246,11 @@ export const TitleProfessor = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
+  top: 10px;
+  right: 10px;
+  position: absolute;
+
   @media screen and (max-width: ${MobileViewWidth}) {
-    height: auto;
-    justify-content: space-around;
   }
 `;
 

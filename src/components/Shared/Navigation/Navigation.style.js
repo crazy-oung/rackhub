@@ -47,7 +47,6 @@ export const StyledHeader = styled.header`
   @media screen and (max-width: ${MobileViewWidth}) {
     height: 60px;
     padding: 0 20px;
-    margin-bottom: 20px;
     border-radius: 0;
   }
 `;

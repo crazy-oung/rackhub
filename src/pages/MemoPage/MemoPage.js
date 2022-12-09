@@ -35,8 +35,8 @@ const MemoPage = () => {
       <Index>
         <BannerSection>
           <TitleSection>
-            <TitleNormal>솔직한 강의평을 원한다면?</TitleNormal>
-            <TitleBold>가자, 한강으로!</TitleBold>
+            <TitleNormal>제목?</TitleNormal>
+            <TitleBold>가자, !</TitleBold>
           </TitleSection>
           <BannerImg>{/* <HangangMainSvg /> */}</BannerImg>
         </BannerSection>

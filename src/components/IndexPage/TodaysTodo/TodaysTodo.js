@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import {
-  DashBoardContentBoxWide,
+  DashBoardContentBoxWide100,
   BoxContentTitle,
   BoxContentTitleLink,
   BoxContentList,
   ContentListTitle,
-  ContentListContent,
+  ProfessorGrey,
   BoxContentListSeparator,
   BoxContentListSection,
   EndDate,
@@ -30,7 +30,7 @@ const TodaysTodo = () => {
   };
 
   return (
-    <DashBoardContentBoxWide style={{}}>
+    <DashBoardContentBoxWide100 style={{}}>
       <BoxContentTitle>
         <BoxContentTitleLink to="/todo">
           나의 할 일 목록
@@ -44,7 +44,7 @@ const TodaysTodo = () => {
         <BoxContentList>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마강일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -76,7 +76,7 @@ const TodaysTodo = () => {
           </li>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마감일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -108,7 +108,7 @@ const TodaysTodo = () => {
           </li>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마감일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -143,7 +143,7 @@ const TodaysTodo = () => {
         <BoxContentListSecond style={{ left: "20px" }}>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마감일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -175,7 +175,7 @@ const TodaysTodo = () => {
           </li>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마감일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -207,7 +207,7 @@ const TodaysTodo = () => {
           </li>
           <li>
             <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ContentListContent>객체지향</ContentListContent>
+            <ProfessorGrey>객체지향</ProfessorGrey>
             <EndDate>마감일: 2021.12.10</EndDate>
             <CheckBoxLabel
               style={{ position: "absolute", bottom: "20px", right: "20px" }}
@@ -239,7 +239,7 @@ const TodaysTodo = () => {
           </li>
         </BoxContentListSecond>
       </BoxContentListSection>
-    </DashBoardContentBoxWide>
+    </DashBoardContentBoxWide100>
   );
 };
 
