@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.7fbc32ab.chunk.js",
-    "main.js.map": "/static/js/main.7fbc32ab.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8f687647.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8f687647.js.map",
-    "static/js/2.a707fcd0.chunk.js": "/static/js/2.a707fcd0.chunk.js",
-    "static/js/2.a707fcd0.chunk.js.map": "/static/js/2.a707fcd0.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.a707fcd0.chunk.js.LICENSE.txt": "/static/js/2.a707fcd0.chunk.js.LICENSE.txt",
-    "static/media/clipboard-check.a96a9aa4.svg": "/static/media/clipboard-check.a96a9aa4.svg",
-    "static/media/document-text.cbb0a650.svg": "/static/media/document-text.cbb0a650.svg",
-    "static/media/home.83a1522b.svg": "/static/media/home.83a1522b.svg",
-    "static/media/rackhub.5227d9cc.svg": "/static/media/rackhub.5227d9cc.svg",
-    "static/media/template.7130c40b.svg": "/static/media/template.7130c40b.svg",
-    "static/media/user.f273e40a.svg": "/static/media/user.f273e40a.svg"
+    "main.js": "./static/js/main.7fbc32ab.chunk.js",
+    "main.js.map": "./static/js/main.7fbc32ab.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8f687647.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8f687647.js.map",
+    "static/js/2.a707fcd0.chunk.js": "./static/js/2.a707fcd0.chunk.js",
+    "static/js/2.a707fcd0.chunk.js.map": "./static/js/2.a707fcd0.chunk.js.map",
+    "index.html": "./index.html",
+    "static/js/2.a707fcd0.chunk.js.LICENSE.txt": "./static/js/2.a707fcd0.chunk.js.LICENSE.txt",
+    "static/media/clipboard-check.a96a9aa4.svg": "./static/media/clipboard-check.a96a9aa4.svg",
+    "static/media/document-text.cbb0a650.svg": "./static/media/document-text.cbb0a650.svg",
+    "static/media/home.83a1522b.svg": "./static/media/home.83a1522b.svg",
+    "static/media/rackhub.5227d9cc.svg": "./static/media/rackhub.5227d9cc.svg",
+    "static/media/template.7130c40b.svg": "./static/media/template.7130c40b.svg",
+    "static/media/user.f273e40a.svg": "./static/media/user.f273e40a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8f687647.js",
