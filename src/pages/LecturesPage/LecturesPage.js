@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import {
   Index,
@@ -17,15 +18,16 @@ import {
   RightBottomRightSection,
 } from "./styles/LecturesPage.style";
 
-import MyProfile from "../../components/IndexPage/MyProfile/MyProfile";
-import TodaysTodo from "../../components/IndexPage/TodaysTodo/TodaysTodo";
-import MyTimetable from "../../components/IndexPage/MyTimetable/MyTimetable";
-import MyMemo from "../../components/IndexPage/MyMemo/MyMemo";
-
 import { timetableLectureList } from "../../static/IndexPage/sampleData";
 
 const LecturesPage = () => {
-  return <Index></Index>;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    ></motion.div>
+  );
 };
 
 export default LecturesPage;

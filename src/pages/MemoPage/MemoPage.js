@@ -9,7 +9,6 @@ import MemoDetail from "../../components/MemoPage/MemoDetail";
 const MemoPage = () => {
   return (
     <motion.div
-      /* 2. 원하는 애니메이션으로 jsx를 감싸준다 */
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
