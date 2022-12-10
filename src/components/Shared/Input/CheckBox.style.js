@@ -52,6 +52,10 @@ export const StyledCheckbox = styled.div`
 
   cursor: pointer;
 
+  :hover {
+    border: 1px solid ${PrimaryColor};
+  }
+
   ${HiddenCheckbox}:focus + & {
     border: 1px solid ${PrimaryColor};
     box-shadow: 0 0 0 3px rgba(131, 219, 76, 0.5);
