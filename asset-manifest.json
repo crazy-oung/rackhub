@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/rackhub/static/js/main.7fbc32ab.chunk.js",
-    "main.js.map": "/rackhub/static/js/main.7fbc32ab.chunk.js.map",
+    "main.js": "/rackhub/static/js/main.b13d4223.chunk.js",
+    "main.js.map": "/rackhub/static/js/main.b13d4223.chunk.js.map",
     "runtime-main.js": "/rackhub/static/js/runtime-main.4a5774eb.js",
     "runtime-main.js.map": "/rackhub/static/js/runtime-main.4a5774eb.js.map",
-    "static/js/2.375d0b74.chunk.js": "/rackhub/static/js/2.375d0b74.chunk.js",
-    "static/js/2.375d0b74.chunk.js.map": "/rackhub/static/js/2.375d0b74.chunk.js.map",
+    "static/js/2.45f62120.chunk.js": "/rackhub/static/js/2.45f62120.chunk.js",
+    "static/js/2.45f62120.chunk.js.map": "/rackhub/static/js/2.45f62120.chunk.js.map",
     "index.html": "/rackhub/index.html",
-    "static/js/2.375d0b74.chunk.js.LICENSE.txt": "/rackhub/static/js/2.375d0b74.chunk.js.LICENSE.txt",
+    "static/js/2.45f62120.chunk.js.LICENSE.txt": "/rackhub/static/js/2.45f62120.chunk.js.LICENSE.txt",
     "static/media/clipboard-check.a96a9aa4.svg": "/rackhub/static/media/clipboard-check.a96a9aa4.svg",
     "static/media/document-text.cbb0a650.svg": "/rackhub/static/media/document-text.cbb0a650.svg",
     "static/media/home.83a1522b.svg": "/rackhub/static/media/home.83a1522b.svg",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4a5774eb.js",
-    "static/js/2.375d0b74.chunk.js",
-    "static/js/main.7fbc32ab.chunk.js"
+    "static/js/2.45f62120.chunk.js",
+    "static/js/main.b13d4223.chunk.js"
   ]
 }
