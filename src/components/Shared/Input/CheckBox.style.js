@@ -50,6 +50,8 @@ export const StyledCheckbox = styled.div`
   border-radius: 3px;
   transition: all 150ms;
 
+  cursor: pointer;
+
   ${HiddenCheckbox}:focus + & {
     border: 1px solid ${PrimaryColor};
     box-shadow: 0 0 0 3px rgba(131, 219, 76, 0.5);

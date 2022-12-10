@@ -36,7 +36,7 @@ export const DashBoardContentBox = styled.article`
   height: 315px;
   min-width: 315px;
   background: #fff;
-  border: 1px solid ${BorderColor};
+
   block-size: 315px;
   border-radius: 16px;
   box-shadow: 0 10px 30px 0 rgba(65, 65, 65, 0.1);
@@ -90,7 +90,7 @@ export const BoxContentTitle = styled.div`
   left: 0;
   top: 0;
 
-  background-color: rgba(152, 179, 154, 0.13);
+  background-color: rgba(181, 238, 152, 0.13);
   background-image: radial-gradient(
     circle at 25%,
     hsla(0, 0%, 90%, 0.2),

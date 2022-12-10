@@ -17,7 +17,7 @@ const MyProfile = () => {
       <DashBoardContentBox
         style={{
           background:
-            "rgba(152, 179, 154, 0.13) radial-gradient(circle at 25%, hsla(0, 0%, 90%, 0.2), rgba(150, 150, 150, 0.04) 100%)",
+            "rgba(181, 238, 152, 0.13) radial-gradient(circle at 80% top, rgba(255 255 255 /100%), rgba(150, 150, 150, 0.04) 100%)",
           backdropFilter: " blur(10px)",
         }}
         onClick={() => history.push("/mypage")}

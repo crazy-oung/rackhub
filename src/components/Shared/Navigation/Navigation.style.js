@@ -29,7 +29,7 @@ export const StyledHeader = styled.header`
   padding: 0 40px;
   border-radius: 0 0 20px 20px;
 
-  background-color: rgba(208, 208, 208, 0.13);
+  background-color: rgba(181, 238, 152, 0.13);
   background-image: radial-gradient(
     circle at 25%,
     hsla(0, 0%, 90%, 0.2),

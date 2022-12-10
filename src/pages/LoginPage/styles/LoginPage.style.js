@@ -51,13 +51,21 @@ export const LoginFormTitle = styled.h1`
   color: ${FontColor};
 `;
 
-export const LoginForm = styled.form``;
+export const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  @media screen and (max-width: ${MobileViewWidth}) {
+    width: 100%;
+  }
+`;
 
 export const LoginInput = styled.input`
   display: block;
   height: 38px;
   padding: 2px 10px;
-  margin: 5px 0;
+  margin: 6px 0;
   border: none;
   color: ${FontColor};
   background-color: #eee;
@@ -75,12 +83,15 @@ export const LoginInput = styled.input`
     outline: 2px solid ${PrimaryColor};
     transition: all 10ms;
   }
+
+  @media screen and (max-width: ${MobileViewWidth}) {
+    width: 100%;
+  }
 `;
 export const InputLabel = styled.label`
   position: relative;
   font-size: 11px;
   color: ${MenuColor};
-  bottom: -3px;
 `;
 
 export const Separator = styled.hr`
