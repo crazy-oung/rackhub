@@ -11,8 +11,10 @@ import {
   BoxContentTitleDescription,
   BoxContentListSecond,
   ProfessorGrey,
+  BoxContentTitleIcon,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
+import { ReactComponent as LectureIconSvg } from "../../../assets/svg/icon/document-text.svg";
 import { currentLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyLectures = () => {
@@ -44,6 +46,9 @@ const MyLectures = () => {
     <DashBoardContentBoxWide>
       <BoxContentTitle>
         <BoxContentTitleLink to="/lectures">
+          <BoxContentTitleIcon>
+            <LectureIconSvg />
+          </BoxContentTitleIcon>
           내 수강중 강의
           <BoxContentTitleDescription>
             현재 수강중인 강의: {currentLectureList.length}개, 총 {totalGP}학점

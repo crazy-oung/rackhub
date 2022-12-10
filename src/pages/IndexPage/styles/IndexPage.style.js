@@ -4,7 +4,7 @@ import {
   FontColor,
   DefaultContentWidth,
   MobileViewWidth,
-  BorderColor,
+  PrimaryColor,
   PlaceholderColor,
   MenuColor,
 } from "../../../static/Shared/commonStyles";
@@ -111,12 +111,23 @@ export const BoxContentListSection = styled.section`
   top: 80px;
 `;
 
+export const BoxContentTitleIcon = styled.figure`
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  svg {
+    width: 40px;
+    height: 40px;
+    stroke: ${PrimaryColor};
+  }
+`;
+
 export const BoxContentTitleLink = styled(Link)`
   width: 100%;
   height: 100%;
-  padding: 12px;
-  font-size: 22px;
-  font-weight: 600;
+  padding: 12px 12px 12px 56px;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 24px;
   text-decoration: none;
   color: ${FontColor};

@@ -8,8 +8,10 @@ import {
   ContentListTitle,
   BoxContentListSection,
   BoxContentTitleDescription,
+  BoxContentTitleIcon,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
+import { ReactComponent as LectureMemoSvg } from "../../../assets/svg/logo/rackhub.svg";
 import { MemoDate, MemoCategory } from "./MyMemo.style";
 
 const MyMemo = () => {
@@ -18,6 +20,9 @@ const MyMemo = () => {
       <DashBoardContentBox>
         <BoxContentTitle>
           <BoxContentTitleLink to="/memo">
+            <BoxContentTitleIcon>
+              <LectureMemoSvg />
+            </BoxContentTitleIcon>
             강의 메모
             <BoxContentTitleDescription>나의 메모</BoxContentTitleDescription>
           </BoxContentTitleLink>

@@ -12,9 +12,12 @@ import {
   EndDate,
   BoxContentTitleDescription,
   BoxContentListSecond,
+  BoxContentTitleIcon,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
 import styled from "styled-components";
+
+import { ReactComponent as LectureMemoSvg } from "../../../assets/svg/icon/clipboard-check.svg";
 
 const TodosList = styled(BoxContentList)`
   li {
@@ -29,14 +32,6 @@ const TodosListSecond = styled(BoxContentListSecond)`
 `;
 
 const TodaysTodo = () => {
-  // const checkboxStyle = {
-  //   display: "flex",
-  //   alignItems: "center",
-  //   justifyContent: "flex-end",
-  //   top: "-15px",
-  //   position: "relative",
-  // };
-
   const checkboxStyle = {
     left: "20px",
     display: "flex",
@@ -52,6 +47,9 @@ const TodaysTodo = () => {
     <DashBoardContentBoxWide100 style={{}}>
       <BoxContentTitle>
         <BoxContentTitleLink to="/todo">
+          <BoxContentTitleIcon>
+            <LectureMemoSvg />
+          </BoxContentTitleIcon>
           나의 할 일 목록
           <BoxContentTitleDescription>
             할일 개수: 6개

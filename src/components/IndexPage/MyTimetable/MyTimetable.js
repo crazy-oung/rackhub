@@ -10,10 +10,12 @@ import {
   BoxContentTitleDescription,
   BoxContentListSecond,
   ProfessorGrey,
+  BoxContentTitleIcon,
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
 import { LectureReviewButton, LectureScore } from "./MyTimetable.style";
 
+import { ReactComponent as LectureTimetableSvg } from "../../../assets/svg/icon/template.svg";
 import { timetableLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyTimetable = () => {
@@ -55,6 +57,9 @@ const MyTimetable = () => {
     <DashBoardContentBoxWide>
       <BoxContentTitle>
         <BoxContentTitleLink to="/timetable">
+          <BoxContentTitleIcon>
+            <LectureTimetableSvg />
+          </BoxContentTitleIcon>
           수강한 강의 현황
           <BoxContentTitleDescription>
             누적 강의 학점: 108학점
