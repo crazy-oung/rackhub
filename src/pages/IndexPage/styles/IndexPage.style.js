@@ -175,11 +175,6 @@ export const BoxContentList = styled.ul`
     border-right: none;
   }
 
-  @media screen and (max-width: ${MobileViewWidth}) {
-    width: 100%;
-    border-right: none;
-  }
-
   li {
     width: calc(100% - 20px);
     padding: 20px;
@@ -202,6 +197,7 @@ export const BoxContentList = styled.ul`
 
     @media screen and (max-width: ${MobileViewWidth}) {
       width: 100%;
+      border-right: none;
     }
   }
 `;

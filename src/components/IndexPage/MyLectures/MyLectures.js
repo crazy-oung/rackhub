@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useHistory } from "react-router-dom";
 import {
   DashBoardContentBoxWide,
   BoxContentTitle,
@@ -19,15 +19,20 @@ import { currentLectureList } from "../../../static/IndexPage/sampleData";
 
 const MyLectures = () => {
   const totalGP = currentLectureList.reduce((a, b) => a + (b["grade"] || 0), 0);
+  const history = useHistory();
 
   const trimLetters = (name) => {
     return name.length > 6 ? name.substr(0, 6) + " ..." : name;
   };
+
   const getThreeLectureFrom = (index) => {
     const rows = [];
     for (let i = index; i < index + 3; i++) {
       rows.push(
-        <li key={trimLetters(currentLectureList[i].lecture)}>
+        <li
+          key={trimLetters(currentLectureList[i].lecture)}
+          onClick={() => history.push("/lectures/" + index)}
+        >
           <ContentListTitle>
             {trimLetters(currentLectureList[i].lecture)}
           </ContentListTitle>

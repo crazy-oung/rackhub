@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import {
   DashBoardContentBox,
@@ -10,10 +9,11 @@ import {
   BoxContentListSection,
   BoxContentTitleDescription,
   BoxContentTitleIcon,
-} from "../../../pages/IndexPage/styles/IndexPage.style";
+} from "../../pages/IndexPage/styles/IndexPage.style";
 
-import { ReactComponent as LectureMemoSvg } from "../../../assets/svg/logo/rackhub.svg";
-import { MemoDate, MemoCategory } from "./MyMemo.style";
+import { ReactComponent as LectureMemoSvg } from "../../assets/svg/logo/rackhub.svg";
+import { MemoDate, MemoCategory } from "./MemoList.style";
+import styled from "styled-components";
 
 const MemoContentList = styled(BoxContentList)`
   li {
@@ -22,9 +22,8 @@ const MemoContentList = styled(BoxContentList)`
   }
 `;
 
-const MyMemo = () => {
+const MemoList = () => {
   const history = useHistory();
-
   return (
     <>
       <DashBoardContentBox>
@@ -33,7 +32,7 @@ const MyMemo = () => {
             <BoxContentTitleIcon>
               <LectureMemoSvg />
             </BoxContentTitleIcon>
-            강의 메모
+            메모
             <BoxContentTitleDescription>나의 메모</BoxContentTitleDescription>
           </BoxContentTitleLink>
         </BoxContentTitle>
@@ -62,4 +61,4 @@ const MyMemo = () => {
   );
 };
 
-export default MyMemo;
+export default MemoList;

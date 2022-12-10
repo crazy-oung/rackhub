@@ -29,7 +29,10 @@ const MyTimetable = () => {
     const rows = [];
     for (let i = index; i < index + 3; i++) {
       rows.push(
-        <li key={timetableLectureList[i].name}>
+        <li
+          key={timetableLectureList[i].name}
+          onClick={() => history.push("/timetable/" + index)}
+        >
           <ContentListTitle>
             {trimLetters(timetableLectureList[i].name)}
           </ContentListTitle>

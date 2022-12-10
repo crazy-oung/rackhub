@@ -9,8 +9,8 @@ import {
   InputLabel,
 } from "./CheckBox.style";
 
-const CheckBox = ({ buttonText, style }) => {
-  const [checked, setChecked] = useState(false);
+const CheckBox = ({ buttonText, style, isChecked = false }) => {
+  const [checked, setChecked] = useState(isChecked);
 
   const handleCheckboxChange = (event) => {
     setChecked(event.target.checked);

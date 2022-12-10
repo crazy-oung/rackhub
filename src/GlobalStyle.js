@@ -68,7 +68,8 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body, #root{
     font-family: 'AppleSDGothicNeo', 'NotoSansCJKKR', 'Noto Sans KR', 'Noto Sans', sans-serif;
-    height: 100%;
+    // height: 100%;
+    height: max-content;
     width: 100%;
 
     background: #fff;
