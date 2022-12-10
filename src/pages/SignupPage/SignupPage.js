@@ -12,18 +12,10 @@ import {
   LoginInput,
   Separator,
   LoginButton,
-  CheckBoxLabel,
-  CheckboxContainer,
-  HiddenCheckbox,
-  StyledCheckbox,
-  Icon,
 } from "./styles/SignupPage.style";
 
 import { ReactComponent as RackhubMainLogoSvg } from "../../assets/svg/logo/rackhub.svg";
-import {
-  setLocalStorageValue,
-  getLocalStorageValue,
-} from "../../utils/localStorageUtils";
+import { setLocalStorageValue } from "../../utils/localStorageUtils";
 import { PrimaryColor } from "../../static/Shared/commonStyles";
 
 import { login } from "../../store/modules/loginReducer";
@@ -86,6 +78,13 @@ const SignupPage = () => {
               type="password"
               name="Pw"
               id="Pw"
+            ></LoginInput>
+            <InputLabel htmlFor="Pw">비밀번호 확인</InputLabel>
+            <LoginInput
+              placeholder="비밀번호 재입력"
+              type="password"
+              name="PwChk"
+              id="PwChk"
             ></LoginInput>
             <InputLabel htmlFor="Bday">생일</InputLabel>
             <LoginInput

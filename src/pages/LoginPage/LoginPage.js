@@ -69,14 +69,6 @@ const LoginPage = () => {
               id="Id"
             ></LoginInput>
 
-            <InputLabel htmlFor="Pw">닉네임</InputLabel>
-            <LoginInput
-              placeholder="닉네임"
-              type="nickname"
-              name="Nickname"
-              id="nickname"
-            ></LoginInput>
-
             <InputLabel htmlFor="Pw">비밀번호</InputLabel>
             <LoginInput
               placeholder="비밀번호"
