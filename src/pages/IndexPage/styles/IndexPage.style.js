@@ -108,7 +108,7 @@ export const BoxContentListSection = styled.section`
   width: 100%;
 
   position: relative;
-  top: 80px;
+  margin-top: 80px;
 `;
 
 export const BoxContentTitleIcon = styled.figure`
@@ -175,6 +175,10 @@ export const BoxContentList = styled.ul`
     border-right: none;
   }
 
+  @media screen and (max-width: ${MobileViewWidth}) {
+    border-right: none;
+  }
+
   li {
     width: calc(100% - 20px);
     padding: 20px;
@@ -197,7 +201,6 @@ export const BoxContentList = styled.ul`
 
     @media screen and (max-width: ${MobileViewWidth}) {
       width: 100%;
-      border-right: none;
     }
   }
 `;

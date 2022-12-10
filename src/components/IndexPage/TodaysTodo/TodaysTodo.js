@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import CheckBox from "../../Shared/Input/CheckBox";
 
 import {
@@ -16,8 +18,9 @@ import {
 } from "../../../pages/IndexPage/styles/IndexPage.style";
 
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 import { ReactComponent as LectureMemoSvg } from "../../../assets/svg/icon/clipboard-check.svg";
+
+import { todoList } from "../../../static/IndexPage/sampleData";
 
 const TodosList = styled(BoxContentList)`
   li {
@@ -45,6 +48,26 @@ const TodaysTodo = () => {
     flexDirection: "column",
   };
 
+  const trimLetters = (name) => {
+    return name.length > 15 ? name.substr(0, 6) + " ..." : name;
+  };
+
+  const getThreeLectureFrom = (index) => {
+    const rows = [];
+    for (let i = index; i < index + 3; i++) {
+      rows.push(
+        <li onClick={() => history.push("/todo/" + index)}>
+          <ContentListTitle>{trimLetters(todoList[i].todo)}</ContentListTitle>
+          <ProfessorGrey>{todoList[i].lecture}</ProfessorGrey>
+          <EndDate>마감일: {todoList[i].due}</EndDate>
+          <CheckBox style={checkboxStyle} isChecked={todoList[i].done} />
+        </li>
+      );
+    }
+
+    return rows;
+  };
+
   return (
     <DashBoardContentBoxWide100 style={{}}>
       <BoxContentTitle>
@@ -60,46 +83,10 @@ const TodaysTodo = () => {
       </BoxContentTitle>
 
       <BoxContentListSection>
-        <TodosList>
-          <li onClick={() => history.push("/todo/")}>
-            <CheckBox style={checkboxStyle} />
-            <ContentListTitle>학이해 기말고사</ContentListTitle>
-            <ProfessorGrey>학습자이해와상담</ProfessorGrey>
-            <EndDate>마강일: 2022.12.14</EndDate>
-          </li>
-          <li onClick={() => history.push("/todo/")}>
-            <ContentListTitle>기말 텀프로젝트 과제</ContentListTitle>
-            <ProfessorGrey>모바일프로그래밍(캡스톤디자인)</ProfessorGrey>
-            <EndDate>마감일: 2022.12.11</EndDate>
-            <CheckBox style={checkboxStyle} />
-          </li>
-          <li onClick={() => history.push("/todo/")}>
-            <ContentListTitle>객체지향 과제</ContentListTitle>
-            <ProfessorGrey>객체지향개발론및실습</ProfessorGrey>
-            <EndDate>마감일: 2022.12.7</EndDate>
-            <CheckBox style={checkboxStyle} isChecked={true} />
-          </li>
-        </TodosList>
+        <TodosList>{getThreeLectureFrom(0)}</TodosList>
 
         <TodosListSecond style={{ left: "20px" }}>
-          <li onClick={() => history.push("/todo/")}>
-            <ContentListTitle>이산수학 기말과제</ContentListTitle>
-            <ProfessorGrey>이산수학</ProfessorGrey>
-            <EndDate>마감일: 2022.12.17</EndDate>
-            <CheckBox style={checkboxStyle} isChecked={false} />
-          </li>
-          <li onClick={() => history.push("/todo/")}>
-            <ContentListTitle>학이해 기말 보고서</ContentListTitle>
-            <ProfessorGrey>학습자이해와상담</ProfessorGrey>
-            <EndDate>마감일: 2022.12.04</EndDate>
-            <CheckBox style={checkboxStyle} isChecked={true} />
-          </li>
-          <li onClick={() => history.push("/todo/")}>
-            <ContentListTitle>증강현실 발표</ContentListTitle>
-            <ProfessorGrey>증강현실및실습</ProfessorGrey>
-            <EndDate>마감일: 2022.12.10</EndDate>
-            <CheckBox style={checkboxStyle} isChecked={true} />
-          </li>
+          {getThreeLectureFrom(3)}
         </TodosListSecond>
       </BoxContentListSection>
     </DashBoardContentBoxWide100>

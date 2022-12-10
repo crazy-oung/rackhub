@@ -181,10 +181,16 @@ export const timetableLectureList = [
 
 export const currentLectureList = [
   {
+    lecture: "증강현실및실습",
+    professer: "김상연",
+    grade: 3,
+    date: "2022/12/14",
+  },
+  {
     lecture: "객체지향개발론및실습",
     professer: "김상진",
     grade: 3,
-    date: "2022/05/05",
+    date: "2022/12/14",
   },
   {
     lecture: "마이크로프로세서및실습",
@@ -229,7 +235,7 @@ export const lectureList = [
     lecture: "Marketing",
     professer: "Giacinta Burrett",
     grade: 0.95,
-    date: "2022/05/05",
+    date: "2022/12/14",
   },
   {
     lecture: "Marketing",
@@ -289,53 +295,39 @@ export const lectureList = [
 
 export const todoList = [
   {
-    todo: "UrnaUtTellus.xls",
-    lecture: "Support",
-    due: "2023/10/08",
+    todo: "학이해 기말고사",
+    lecture: "학습자이해와상담",
+    due: "2022.12.14",
+    done: false,
   },
   {
-    todo: "Semper.jpeg",
-    lecture: "Marketing",
-    due: "2023/01/10",
+    todo: "기말 텀프로젝트 과제",
+    lecture: "모바일프로그래밍(캡스톤디자인)",
+    due: "2022.12.11",
+    done: false,
   },
   {
-    todo: "Donec.avi",
-    lecture: "Human Resources",
-    due: "2023/03/24",
+    todo: "객체지향 과제",
+    lecture: "객체지향개발론및실습",
+    due: "2022.12.7",
+    done: true,
   },
   {
-    todo: "VelEst.ppt",
-    lecture: "Training",
-    due: "2023/11/26",
+    todo: "이산수학 기말과제",
+    lecture: "이산수학",
+    due: "2022.12.17",
+    done: false,
   },
   {
-    todo: "Magnis.tiff",
-    lecture: "Marketing",
-    due: "2023/06/07",
+    todo: "학이해 기말 보고서",
+    lecture: "학습자이해와상담",
+    due: "2022.12.04",
+    done: true,
   },
   {
-    todo: "Volutpat.avi",
-    lecture: "Sales",
-    due: "2023/03/16",
-  },
-  {
-    todo: "Vitae.avi",
-    lecture: "Sales",
-    due: "2023/10/27",
-  },
-  {
-    todo: "SedTristique.mov",
-    lecture: "Business Development",
-    due: "2023/10/20",
-  },
-  {
-    todo: "InSagittis.xls",
-    lecture: "Human Resources",
-    due: "2023/11/21",
-  },
-  {
-    todo: "MetusVitaeIpsum.xls",
-    lecture: "Engineering",
-    due: "2023/03/13",
+    todo: "증강현실 발표",
+    lecture: "증강현실및실습",
+    due: "2022.12.11",
+    done: true,
   },
 ];
