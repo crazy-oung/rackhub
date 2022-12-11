@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import CheckBox from "../../components/Shared/Input/CheckBox";
 
+import { PrimaryColor } from "../../static/Shared/commonStyles";
 import {
   DashBoardContentBox,
   BoxContentTitle,
@@ -57,10 +58,71 @@ const TodosList = styled(BoxContentList)`
   }
 `;
 
+const TodoInputSection = styled.section`
+  display: flex;
+  height: 38px;
+  margin-bottom: 12px;
+  top: 80px;
+  position: relative;
+`;
+
+const TodoInput = styled.input`
+  all: unset;
+  height: auto;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 35px;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid #eee;
+
+  :before {
+    box-shadow: 0px 0px 0px 2px #eee;
+  }
+
+  :hover {
+    background-color: #eee;
+  }
+
+  :focus {
+    box-shadow: 0px 0px 0px 2px ${PrimaryColor};
+  }
+`;
+
 const TodoPage = () => {
   const history = useHistory();
   const [loadedTodos, setLoadedTodos] = useState(todoList);
   const [renderList, setRenderList] = useState("");
+  const [newTodo, setNewTodo] = useState("");
+
+  const handleNewTodo = (e) => {
+    setNewTodo(e.target.value);
+    if (e.key === "Enter") {
+      let rows = loadedTodos;
+
+      rows.unshift({
+        todo: e.target.value,
+        lecture: "오늘 할일",
+        due: new Date().toLocaleDateString("ko-kr"),
+        done: false,
+      });
+
+      setLoadedTodos(rows);
+
+      setRenderList(
+        loadedTodos.map(({ todo, lecture, due, done }, index) => {
+          return (
+            <li onClick={() => history.push("/todo/" + index)}>
+              <ContentListTitle>{trimLetters(todo)}</ContentListTitle>
+              <ProfessorGrey>{lecture}</ProfessorGrey>
+              <EndDate>마감일: {due}</EndDate>
+              <CheckBox style={checkboxStyle} isChecked={done} />
+            </li>
+          );
+        })
+      );
+    }
+  };
 
   const checkboxStyle = {
     left: "20px",
@@ -110,7 +172,10 @@ const TodoPage = () => {
     setRenderList(
       loadedTodos.map(({ todo, lecture, due, done }, index) => {
         return (
-          <li onClick={() => history.push("/todo/" + index)}>
+          <li
+            onClick={() => history.push("/todo/" + index)}
+            style={{ width: "100%" }}
+          >
             <ContentListTitle>{trimLetters(todo)}</ContentListTitle>
             <ProfessorGrey>{lecture}</ProfessorGrey>
             <EndDate>마감일: {due}</EndDate>
@@ -142,6 +207,16 @@ const TodoPage = () => {
             </BoxContentTitleDescription>
           </BoxContentTitleLink>
         </BoxContentTitle>
+
+        <TodoInputSection>
+          <TodoInput
+            type="text"
+            placeholder="오늘 내가 해야 할 일?"
+            value={newTodo}
+            onChange={handleNewTodo}
+            onKeyPress={handleNewTodo}
+          />
+        </TodoInputSection>
 
         <BoxContentListSection>
           <TodosList>{renderList}</TodosList>
